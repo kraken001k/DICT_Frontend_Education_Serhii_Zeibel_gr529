@@ -1,74 +1,300 @@
 <!doctype html>
 <html lang="uk">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homepage | Department of Information and Communication Technologies</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Кафедра ІКТ — Головна</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
 </head>
 <body>
-<!-- Головне меню -->
-<nav>
-    <ul>
-        <li><a href="#specialties">Спеціальності</a></li>
-        <li><a href="#science">Наука</a></li>
-        <li><a href="#news">Новини</a></li>
-        <li><a href="#contact">Контакти</a></li>
-    </ul>
-</nav>
 
-<div>
-    <!-- Логотип кафедри -->
-    <img src="images/logo.svg" alt="Department Logo">
+<!-- ШАПКА -->
+<header>
+    <!-- Логотип -->
+    <a href="#" aria-label="Головна">
+        <img src="images/logo.svg" alt="Логотип кафедри ІКТ" />
+    </a>
 
-    <!-- Головний заголовок -->
-    <h1>Створюй майбутнє. Тут і зараз!</h1>
-    <p>
-        Вибери не просто освіту - обери шлях до свого технологічного майбутнього!
-        Кафедра ІКТ ХАІ - це місце, де ідеї стають реальністю, а знання відкривають двері до кар’єри мрії.
-        Почни свій шлях вже сьогодні!
-    </p>
+    <!-- Головне меню -->
+    <nav aria-label="Головне меню">
+        <ul>
+            <li><a href="#specialties">Спеціальності</a></li>
+            <li><a href="#numbers">Якщо в числах</a></li>
+            <li><a href="#alumni">Відгуки</a></li>
+            <li><a href="#science">Наука</a></li>
+            <li><a href="#partners">Нам довіряють</a></li>
+            <li><a href="#news">Новини</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+        </ul>
+    </nav>
 
-    <!-- Розділ Наші спеціальності -->
-    <h2 id="specialties">Наші спеціальності</h2>
-    <p>
-        Ми спеціалізуємось на підготовці фахівців в області мережевих, програмних
-        та інформаційних технологій за двома напрямками:
-        172 - Електронні комунікації та радіотехніка і 126 - Інформаційні системи та технології.
-    </p>
+    <!-- Пошук + перемикач мови -->
+    <div>
+        <button type="button" aria-label="Пошук">🔎</button>
+        <a href="#" lang="en" hreflang="en" aria-label="Switch language to English">EN</a>
+    </div>
+</header>
 
-    <!-- Розділ Якщо в числах -->
-    <h2>Якщо в числах</h2>
+<!-- ОСНОВНИЙ КОНТЕНТ -->
+<main id="main">
+    <!-- Банер сайту -->
+    <section aria-labelledby="hero-title">
+        <h1 id="hero-title">Створюй майбутнє. Тут і зараз!</h1>
+        <p>
+            Обери шлях до свого технологічного майбутнього. Кафедра ІКТ ХАІ — місце, де ідеї
+            стають реальністю, а знання відкривають двері до кар’єри мрії.
+        </p>
+        <figure>
+            <img src="media/boy 2.png"
+                 alt="Студент працює за ноутбуком у лабораторії"
+                 title="Студент у лабораторії"
+                 width="600" />
+            <figcaption>Ілюстрація студентської команди.</figcaption>
+        </figure>
+    </section>
 
-    <!-- Розділ Наука та інновації -->
-    <h2 id="science">Наука та інновації</h2>
-    <p>Від аудиторії — до реального проєкту</p>
-    <p>
-        Наші студенти не просто вивчають теорію — вони беруть участь у реальних
-        проєктах, розробляють ІТ-рішення, створюють стартапи та співпрацюють з компаніями-партнерами.
-        На кафедрі діють наукові гуртки, лабораторії та ініціативи, де кожен може реалізувати себе ще під час навчання.
-        Дослідження, що перетворюються на продукт — саме тут це можливо.
-    </p>
+    <!-- Наші спеціальності -->
+    <section id="specialties" aria-labelledby="spec-title">
+        <h2 id="spec-title">Наші спеціальності</h2>
+        <p>
+            Ми спеціалізуємося на підготовці фахівців у галузі мережевих, програмних
+            та інформаційних технологій за двома напрямами:
+            <strong>126 — Інформаційні системи та технології</strong> і
+            <strong>172 — Електронні комунікації та радіотехніка</strong>.
+        </p>
+        <ul>
+            <li>
+                <article>
+                    <h3><strong>126</strong> — Інформаційні системи та технології</h3>
+                    <p>Розробка ПЗ, веб-технології, робота з даними, хмарні сервіси.</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h3><strong>172</strong> — Електронні комунікації та радіотехніка</h3>
+                    <p>Мережі й протоколи, бездротові системи, телеком, 5G/6G.</p>
+                </article>
+            </li>
+        </ul>
+    </section>
 
-    <!-- Розділ Нам довіряють -->
-    <h2>Нам довіряють</h2>
+    <!-- Якщо в числах -->
+    <section id="numbers" aria-labelledby="numbers-title">
+        <h2 id="numbers-title">Якщо в числах</h2>
+        <ul>
+            <li><p><strong>18</strong></p><p>Досвідчених викладачів</p></li>
+            <li><p><strong>65</strong></p><p>Навчальних дисциплін</p></li>
+            <li><p><strong>1200+</strong></p><p>Талановитих випускників</p></li>
+            <li><p><strong>∞</strong></p><p>Унікального досвіду</p></li>
+        </ul>
+    </section>
 
-    <!-- Розділ Контакти -->
-    <h2 id="contact">Контакти</h2>
-    <p>61070, Харків, вул. Вадима Манька, 17</p>
-    <p>НАУ ім. М.Є.Жуковського "ХАІ"</p>
-    <p>Кафедра інформаційно-комунікаційних технологій №504</p>
+    <!-- Відгуки випускників -->
+    <section id="alumni" aria-labelledby="alumni-title">
+        <h2 id="alumni-title">Відгуки випускників</h2>
 
-    <!-- Посилання на email та телефон -->
-    <p><a href="mailto:k504@khai.edu">k504@khai.edu</a></p>
-    <p><a href="tel:+380995025775">+38 (099) 502-57-75</a></p>
+        <div aria-label="Керування відгуками">
+            <button type="button" aria-controls="alumni-list" aria-label="Попередній відгук">◀</button>
+            <button type="button" aria-controls="alumni-list" aria-label="Наступний відгук">▶</button>
+        </div>
 
+        <ul id="alumni-list">
+            <li>
+                <article aria-label="1 з 4">
+                    <blockquote>
+                        <p>«Навчання на кафедрі дало мені сильну базу з веб-технологій…»</p>
+                    </blockquote>
+                    <p><strong>Марія Коваль</strong> — Frontend Engineer, SoftServe</p>
+                </article>
+            </li>
+            <li>
+                <article aria-label="2 з 4">
+                    <blockquote>
+                        <p>«Лабораторні проєкти максимально наближені до реальних задач…»</p>
+                    </blockquote>
+                    <p><strong>Андрій Пархоменко</strong> — DevOps Engineer, EPAM</p>
+                </article>
+            </li>
+            <li>
+                <article aria-label="3 з 4">
+                    <blockquote>
+                        <p>«Викладачі мотивували досліджувати нові інструменти даних…»</p>
+                    </blockquote>
+                    <p><strong>Олена Мельник</strong> — Data Analyst, NIX</p>
+                </article>
+            </li>
+            <li>
+                <article aria-label="4 з 4">
+                    <blockquote>
+                        <p>«Кафедра — це спільнота. Менторство, хакатони та pet-проєкти…»</p>
+                    </blockquote>
+                    <p><strong>Дмитро Савчук</strong> — Product Manager, GlobalLogic</p>
+                    <audio controls preload="metadata">
+                        <source src="media/file_example_MP3_700KB.mp3" type="audio/mpeg" />
+                        Ваш браузер не підтримує аудіо.
+                    </audio>
+                </article>
+            </li>
+        </ul>
+    </section>
 
-    <!-- Розділ Новини -->
-    <h2 id="news">Новини</h2>
-</div>
+    <!-- Наука та інновації -->
+    <section id="science" aria-labelledby="science-title">
+        <h2 id="science-title">Наука та інновації</h2>
+        <h3>Від аудиторії — до реального проєкту</h3>
+        <p>
+            Наші студенти не просто вивчають теорію — вони беруть участь у реальних
+            проєктах, розробляють ІТ-рішення, створюють стартапи та співпрацюють із партнерами.
+            На кафедрі діють наукові гуртки, лабораторії та ініціативи.
+        </p>
+        <p><button type="button">Дізнатись більше</button></p>
+        <figure>
+            <img src="media/Science.png"
+                 alt="Студенти працюють із дослідницьким обладнанням у лабораторії"
+                 title="Лабораторія інновацій" />
+            <figcaption>Фото з лабораторії кафедри.</figcaption>
+        </figure>
+    </section>
+
+    <!-- Нам довіряють -->
+    <section id="partners" aria-labelledby="partners-title">
+        <h2 id="partners-title">Нам довіряють</h2>
+        <ul aria-label="Партнерські компанії">
+            <li><img src="media/nix.svg"        alt="NIX"              title="NIX"              width="120" /></li>
+            <li><img src="media/sigma.svg"      alt="Sigma Software"   title="Sigma Software"   width="120" /></li>
+            <li><img src="media/gl.svg"         alt="GlobalLogic"      title="GlobalLogic"      width="120" /></li>
+            <li><img src="media/epam.svg"       alt="EPAM"             title="EPAM"             width="120" /></li>
+            <li><img src="media/softserve.svg"  alt="SoftServe"        title="SoftServe"        width="120" /></li>
+            <li><img src="media/dataart.svg"    alt="DataArt"          title="DataArt"          width="120" /></li>
+        </ul>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contacts" aria-labelledby="contacts-title">
+        <h2 id="contacts-title">Контакти</h2>
+        <address>
+            61070, Харків, вул. Вадима Манька, 17<br />
+            НАУ ім. М. Є. Жуковського «ХАІ»<br />
+            Кафедра інформаційно-комунікаційних технологій №504<br />
+            Телефон: <a href="tel:+380995025775">+38 (099) 502-57-75</a> (у будні 9:00–17:00)<br />
+            E-mail: <a href="mailto:k504@khai.edu">k504@khai.edu</a>
+        </address>
+
+        <h3>Соціальні мережі</h3>
+        <ul aria-label="Соціальні мережі кафедри">
+            <li><a href="#" aria-label="Facebook"><img src="media/fb.svg" alt="Facebook" width="28" height="28" /></a></li>
+            <li><a href="#" aria-label="LinkedIn"><img src="media/in.svg" alt="LinkedIn" width="28" height="28" /></a></li>
+            <li><a href="#" aria-label="Instagram"><img src="media/instagram.svg" alt="Instagram" width="28" height="28" /></a></li>
+            <li><a href="#" aria-label="Telegram"><img src="media/telegram.svg" alt="Telegram" width="28" height="28" /></a></li>
+            <li><a href="#" aria-label="Viber"><img src="media/viber.svg" alt="Viber" width="28" height="28" /></a></li>
+        </ul>
+    </section>
+
+    <!-- Новини -->
+    <section id="news" aria-labelledby="news-title">
+        <h2 id="news-title">Новини</h2>
+
+        <div aria-label="Керування новинами">
+            <button type="button" aria-controls="news-list" aria-label="Попередня новина">◀</button>
+            <button type="button" aria-controls="news-list" aria-label="Наступна новина">▶</button>
+        </div>
+
+        <ul id="news-list">
+            <li>
+                <article aria-label="1 з 4">
+                    <h3>День кар’єри в ХАІ</h3>
+                    <p>Зустріч із роботодавцями, воркшопи та можливість стажування.</p>
+                    <video width="480" height="270"
+                           autoplay muted loop playsinline preload="metadata"
+                           poster="media/image 4.png" aria-label="Короткий відеоролик до новини">
+                        <source src="media/file_example_MP4_480_1_5MG.mp4" type="video/mp4" />
+                        Ваш браузер не підтримує відтворення відео.
+                    </video>
+                    <p><time datetime="2025-01-07">07 січ 2025</time></p>
+                </article>
+            </li>
+
+            <li>
+                <article aria-label="2 з 4">
+                    <figure>
+                        <img src="media/image (1).png" alt="Лабораторні роботи студентів" title="Лабораторні роботи" />
+                        <figcaption>Студентські проєкти.</figcaption>
+                    </figure>
+                    <h3>Хакатон від партнерів</h3>
+                    <p>Команди кафедри представили прототипи рішень з кібербезпеки та IoT.</p>
+                    <p><time datetime="2025-01-15">15 січ 2025</time></p>
+                </article>
+            </li>
+
+            <li>
+                <article aria-label="3 з 4">
+                    <figure>
+                        <img src="media/image (2).png" alt="Освітня лекція від індустрійного експерта" title="Гостьова лекція" />
+                        <figcaption>Гостьова лекція.</figcaption>
+                    </figure>
+                    <h3>Гостьова лекція про AI</h3>
+                    <p>Експерт з Data Science розповів про сучасні підходи до ML-систем.</p>
+                    <p><time datetime="2025-01-22">22 січ 2025</time></p>
+                </article>
+            </li>
+
+            <li>
+                <article aria-label="4 з 4">
+                    <figure>
+                        <img src="media/image 4.png" alt="Аудиторія під час семінару" title="Семінар" />
+                        <figcaption>Семінар кафедри.</figcaption>
+                    </figure>
+                    <h3>Науковий семінар</h3>
+                    <p>Обговорили результати досліджень у сфері телекомунікаційних мереж.</p>
+                    <p><time datetime="2025-01-29">29 січ 2025</time></p>
+                </article>
+            </li>
+        </ul>
+
+        <p><a href="#" role="button" aria-label="Перейти до всіх новин">Більше новин</a></p>
+    </section>
+</main>
+
+<!-- НИЖНІЙ КОЛОНТИТУЛ -->
+<footer aria-labelledby="footer-title">
+    <h2 id="footer-title">Кафедра ІКТ ХАІ — контакти</h2>
+
+    <div>
+        <a href="#" aria-label="Головна">
+            <img src="images/logo.svg" alt="Логотип кафедри ІКТ" width="56" />
+        </a>
+        <p>&copy; 2025 Кафедра ІКТ ХАІ</p>
+    </div>
+
+    <section aria-labelledby="footer-address-title">
+        <h3 id="footer-address-title">Адреса</h3>
+        <address>
+            61070, Харків, вул. Вадима Манька, 17<br />
+            НАУ ім. М. Є. Жуковського «ХАІ»<br />
+            Кафедра інформаційно-комунікаційних технологій №504
+        </address>
+    </section>
+
+    <section aria-labelledby="footer-contact-title">
+        <h3 id="footer-contact-title">Зв’язок</h3>
+        <p>Телефон: <a href="tel:+380995025775">+38 (099) 502-57-75</a></p>
+        <p>E-mail: <a href="mailto:k504@khai.edu">k504@khai.edu</a></p>
+    </section>
+
+    <section aria-labelledby="footer-social-title">
+        <h3 id="footer-social-title">Соціальні мережі</h3>
+        <ul aria-label="Соціальні мережі кафедри">
+            <li><a href="#" aria-label="Facebook"><img src="media/fb.svg" alt="Facebook" width="28" height="28" /></a></li>
+            <li><a href="#" aria-label="LinkedIn"><img src="media/in.svg" alt="LinkedIn" width="28" height="28" /></a></li>
+            <li><a href="#" aria-label="Instagram"><img src="media/instagram.svg" alt="Instagram" width="28" height="28" /></a></li>
+            <li><a href="#" aria-label="Telegram"><img src="media/telegram.svg" alt="Telegram" width="28" height="28" /></a></li>
+            <li><a href="#" aria-label="Viber"><img src="media/viber.svg" alt="Viber" width="28" height="28" /></a></li>
+        </ul>
+    </section>
+</footer>
+
 </body>
 </html>
