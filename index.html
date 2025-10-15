@@ -163,6 +163,11 @@
     <section id="alumni" aria-labelledby="alumni-title">
         <h2 id="alumni-title">Відгуки випускників</h2>
 
+        <audio controls preload="metadata">
+            <source src="media/file_example_MP3_700KB.mp3" type="audio/mpeg" />
+            Ваш браузер не підтримує аудіо.
+        </audio>
+
         <div aria-label="Керування відгуками">
             <button type="button" aria-controls="alumni-list" aria-label="Попередній відгук">◀</button>
             <button type="button" aria-controls="alumni-list" aria-label="Наступний відгук">▶</button>
@@ -174,7 +179,12 @@
                     <blockquote>
                         <p>«Навчання на кафедрі дало мені сильну базу з веб-технологій…»</p>
                     </blockquote>
-                    <p><strong>Марія Коваль</strong> — Frontend Engineer, SoftServe</p>
+                    <p>
+                        <img src="media/feedback-1.png" alt="Аватар випускника"
+                             width="40" height="40"
+                             style="vertical-align:middle; margin-right:8px;">
+                        <strong>Марія Коваль</strong> — Frontend Engineer, SoftServe
+                    </p>
                 </article>
             </li>
             <li>
@@ -182,7 +192,12 @@
                     <blockquote>
                         <p>«Лабораторні проєкти максимально наближені до реальних задач…»</p>
                     </blockquote>
-                    <p><strong>Андрій Пархоменко</strong> — DevOps Engineer, EPAM</p>
+                    <p>
+                        <img src="media/feedback-2.png" alt="Аватар випускника"
+                             width="40" height="40"
+                             style="vertical-align:middle; margin-right:8px;">
+                        <strong>Андрій Пархоменко</strong> — DevOps Engineer, EPAM
+                    </p>
                 </article>
             </li>
             <li>
@@ -190,7 +205,12 @@
                     <blockquote>
                         <p>«Викладачі мотивували досліджувати нові інструменти даних…»</p>
                     </blockquote>
-                    <p><strong>Олена Мельник</strong> — Data Analyst, NIX</p>
+                    <p>
+                        <img src="media/feedback-3.png" alt="Аватар випускника"
+                             width="40" height="40"
+                             style="vertical-align:middle; margin-right:8px;">
+                        <strong>Олена Мельник</strong> — Data Analyst, NIX
+                    </p>
                 </article>
             </li>
             <li>
@@ -198,13 +218,16 @@
                     <blockquote>
                         <p>«Кафедра — це спільнота. Менторство, хакатони та pet-проєкти…»</p>
                     </blockquote>
-                    <p><strong>Дмитро Савчук</strong> — Product Manager, GlobalLogic</p>
-                    <audio controls preload="metadata">
-                        <source src="media/file_example_MP3_700KB.mp3" type="audio/mpeg" />
-                        Ваш браузер не підтримує аудіо.
-                    </audio>
+                    <p>
+                        <img src="media/feedback-4.png" alt="Аватар випускника"
+                             width="40" height="40"
+                             style="border-radius:50%; vertical-align:middle; margin-right:8px;">
+                        <strong>Сергій Зейбель</strong> — Product Manager, GlobalLogic
+                    </p>
+
                 </article>
             </li>
+
         </ul>
     </section>
 
@@ -349,22 +372,29 @@
     <section id="news" aria-labelledby="news-title">
         <h2 id="news-title">Новини</h2>
 
+        <figure aria-label="Відео-банер">
+            <video width="480" height="270"
+                   autoplay muted loop playsinline preload="metadata">
+                <source src="media/file_example_MP4_480_1_5MG.mp4" type="video/mp4" />
+                Ваш браузер не підтримує відтворення відео.
+            </video>
+        </figure>
+
         <div aria-label="Керування новинами">
             <button type="button" aria-controls="news-list" aria-label="Попередня новина">◀</button>
             <button type="button" aria-controls="news-list" aria-label="Наступна новина">▶</button>
         </div>
 
         <ul id="news-list">
+
             <li>
                 <article aria-label="1 з 4">
+                    <figure>
+                        <img src="media/image 4.png" alt="День кар’єри в ХАІ — превʼю">
+                        <figcaption>День кар’єри в ХАІ</figcaption>
+                    </figure>
                     <h3>День кар’єри в ХАІ</h3>
                     <p>Зустріч із роботодавцями, воркшопи та можливість стажування.</p>
-                    <video width="480" height="270"
-                           autoplay muted loop playsinline preload="metadata"
-                           poster="media/image 4.png" aria-label="Короткий відеоролик до новини">
-                        <source src="media/file_example_MP4_480_1_5MG.mp4" type="video/mp4" />
-                        Ваш браузер не підтримує відтворення відео.
-                    </video>
                     <p><time datetime="2025-01-07">07 січ 2025</time></p>
                 </article>
             </li>
