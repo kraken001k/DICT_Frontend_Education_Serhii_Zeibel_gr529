@@ -1,4 +1,26 @@
-$main-color: #2c3e50;
-$secondary-color: #3498db;
-$grey: #8e8e8e;
-$red: #FF3A3A;
+// === SCSS-змінні ===
+$primary:        #1d1d1d;
+$primary-light:  #f8f8f8;
+$grey:           #7c7c7c;
+$red:            #ff3b39;
+$red-hover:      #ff1a18;
+$silver:         #bfbfbf;
+
+// === CSS Custom Properties ===
+:root {
+  --primary-color: #{$primary};
+  --primary-text-color: #{$primary-light};
+  --red-color: #{$red};
+  --red-hover-color: #{$red-hover};
+  --grey-color: #{$grey};
+  --silver-color: #{$silver};
+}
+
+[data-theme="light"] {
+  --primary-color: #{$primary-light};
+  --primary-text-color: #{$primary};
+  --red-color: #{$red};
+  --red-hover-color: #{$red-hover};
+  --grey-color: #{$grey};
+  --silver-color: #{$silver};
+}
