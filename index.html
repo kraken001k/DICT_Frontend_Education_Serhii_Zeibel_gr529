@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Кафедра ІКТ — Головна</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css">
     <script defer src="js/main.js"></script>
 </head>
 <body>
@@ -149,7 +149,7 @@
 
 
     <!-- Якщо в числах -->
-    <section id="numbers" aria-labelledby="numbers-title">
+    <section id="in-numbers">
         <h2 id="numbers-title">Якщо в числах</h2>
         <ul>
             <li><p><strong>18</strong></p><p>Досвідчених викладачів</p></li>
@@ -160,7 +160,7 @@
     </section>
 
     <!-- Відгуки випускників -->
-    <section id="alumni" aria-labelledby="alumni-title">
+    <section id="feedbacks">
         <h2 id="alumni-title">Відгуки випускників</h2>
 
         <audio controls preload="metadata">
@@ -385,10 +385,10 @@
             <button type="button" aria-controls="news-list" aria-label="Наступна новина">▶</button>
         </div>
 
-        <ul id="news-list">
+        <ul id="news-list" class="news-cards">
 
-            <li>
-                <article aria-label="1 з 4">
+            <li class="news-card">
+                <article class="content-wrapper">
                     <figure>
                         <img src="media/image 4.png" alt="День кар’єри в ХАІ — превʼю">
                         <figcaption>День кар’єри в ХАІ</figcaption>
@@ -399,8 +399,8 @@
                 </article>
             </li>
 
-            <li>
-                <article aria-label="2 з 4">
+            <li class="news-card">
+                <article class="content-wrapper">
                     <figure>
                         <img src="media/image (1).png" alt="Лабораторні роботи студентів" title="Лабораторні роботи" />
                         <figcaption>Студентські проєкти.</figcaption>
@@ -411,8 +411,8 @@
                 </article>
             </li>
 
-            <li>
-                <article aria-label="3 з 4">
+            <li class="news-card">
+                <article class="content-wrapper">
                     <figure>
                         <img src="media/image (2).png" alt="Освітня лекція від індустрійного експерта" title="Гостьова лекція" />
                         <figcaption>Гостьова лекція.</figcaption>
@@ -423,8 +423,8 @@
                 </article>
             </li>
 
-            <li>
-                <article aria-label="4 з 4">
+            <li class="news-card">
+                <article class="content-wrapper">
                     <figure>
                         <img src="media/image 4.png" alt="Аудиторія під час семінару" title="Семінар" />
                         <figcaption>Семінар кафедри.</figcaption>

@@ -1,0 +1,11 @@
+@mixin card {
+  padding: $base-padding;
+  border-radius: 20px;
+  border: 1px solid $grey;
+}
+
+@mixin grid($cols) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: 0;
+}
