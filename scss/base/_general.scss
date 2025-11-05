@@ -1,9 +1,37 @@
 body {
+  background: var(--primary-color);
+  color: var(--primary-text-color);
   font-family: $font-stack;
-  color: $main-color;
-  max-width: 80em;
+  max-width: $widedesk;
   margin: 0 auto;
   padding: 0 $base-padding;
+}
+
+a {
+  color: var(--red-color);
+}
+
+.button {
+  background: var(--red-color);
+  color: var(--primary-text-color);
+  width: fit-content;
+  padding: 7px 14px;
+  border-radius: 5px;
+  margin: 40px 0;
+  border: 1px solid var(--red-color);
+
+  p {
+    margin: 0;
+  }
+
+  &:hover {
+    background: var(--red-hover-color);
+    border-color: var(--red-hover-color);
+  }
+
+  &:focus {
+    background: var(--primary-color);
+  }
 }
 
 section {
