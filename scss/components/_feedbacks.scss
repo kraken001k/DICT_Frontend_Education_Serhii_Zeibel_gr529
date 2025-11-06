@@ -5,3 +5,28 @@
     }
   }
 }
+
+
+#feedbacks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+#feedbacks #alumni-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ширина кожного відгуку */
+#feedbacks #alumni-list li {
+  flex: 0 1 220px;
+}

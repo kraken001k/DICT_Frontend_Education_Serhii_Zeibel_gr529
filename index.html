@@ -20,41 +20,50 @@
 
     <!-- Головне меню -->
     <nav aria-label="Головне меню">
-        <ul>
-            <li><a href="#specialties">Спеціальності</a></li>
-            <li><a href="#ipis">ІПІС</a></li>
-            <li><a href="#numbers">Якщо в числах</a></li>
-            <li><a href="#alumni">Відгуки</a></li>
-            <li><a href="#science">Наука</a></li>
-            <li><a href="#partners">Нам довіряють</a></li>
-            <li><a href="#news">Новини</a></li>
-            <li><a href="#contacts">Контакти</a></li>
+        <ul class="main-menu">
+            <li><a class="menu-link" href="#specialties">Спеціальності</a></li>
+            <li><a class="menu-link" href="#numbers">Якщо в числах</a></li>
+            <li><a class="menu-link" href="#alumni">Відгуки</a></li>
+            <li><a class="menu-link" href="#science">Наука</a></li>
+            <li><a class="menu-link" href="#partners">Нам довіряють</a></li>
+            <li><a class="menu-link" href="#news">Новини</a></li>
+            <li><a class="menu-link" href="#contacts">Контакти</a></li>
         </ul>
     </nav>
 
     <!-- Пошук + перемикач мови -->
-    <div>
-        <button type="button" aria-label="Пошук">🔎</button>
-        <a href="#" lang="en" hreflang="en" aria-label="Switch language to English">EN</a>
+    <a class="search" href="#" aria-label="Пошук">
+        <img src="images/search.svg" alt="">
+    </a>
+
+    <div class="lang">
+        <ul class="lang-wrapper">
+            <li class="ua"><a href="#" class="is-active">UA</a></li>
+            <li class="en"><a href="#">EN</a></li>
+        </ul>
     </div>
 </header>
 
 <!-- ОСНОВНИЙ КОНТЕНТ -->
 <main id="main">
     <!-- Банер сайту -->
-    <section aria-labelledby="hero-title">
-        <h1 id="hero-title">Створюй майбутнє. Тут і зараз!</h1>
-        <p>
-            Обери шлях до свого технологічного майбутнього. Кафедра ІКТ ХАІ — місце, де ідеї
-            стають реальністю, а знання відкривають двері до кар’єри мрії.
-        </p>
-        <figure>
-            <img src="media/boy 2.png"
+    <section id="banner" aria-labelledby="hero-title">
+        <div class="content-wrapper">
+            <h1 id="hero-title">Створюй майбутнє. Тут і зараз!</h1>
+            <div class="description">
+                <p>
+                    Обери шлях до свого технологічного майбутнього. Кафедра ІКТ ХАІ — місце, де ідеї
+                    стають реальністю, а знання відкривають двері до кар’єри мрії.
+                </p>
+            </div>
+            <a class="button" href="#start">Дізнатись більше</a>
+        </div>
+
+        <div class="image-wrapper">
+            <img src="images/man.png"
                  alt="Студент працює за ноутбуком у лабораторії"
-                 title="Студент у лабораторії"
-                 width="600" />
-            <figcaption>Ілюстрація студентської команди.</figcaption>
-        </figure>
+                 title="Студент у лабораторії">
+        </div>
     </section>
 
     <!-- Наші спеціальності -->
@@ -63,14 +72,14 @@
         <p>
             Ми спеціалізуємося на підготовці фахівців у галузі мережевих, програмних
             та інформаційних технологій за двома напрямами:
-            <strong>126 — Інформаційні системи та технології</strong> і
+            <strong>126 — Інформаційні системи та технології</strong>
             <strong>172 — Електронні комунікації та радіотехніка</strong>.
         </p>
         <ul>
             <li>
                 <article>
                     <h3><strong>126</strong> — Інформаційні системи та технології</h3>
-                    <p>Розробка ПЗ, веб-технології, робота з даними, хмарні сервіси.</p>
+                    <p>Розробка ПЗ, вебтехнології, робота з даними, хмарні сервіси.</p>
                 </article>
             </li>
             <li>
@@ -82,9 +91,9 @@
         </ul>
     </section>
 
-    <!-- Секція ІПІС -->
-    <section id="ipis" aria-labelledby="ipis-title">
-        <h2 id="ipis-title">Інжиніринг і програмування інфокомунікаційних систем</h2>
+    <!-- Секція spec-126-ipis -->
+    <section id="spec-126-ipis" aria-labelledby="spec-126-ipis-title">
+        <h2 id="spec-126-ipis-title">Інжиніринг і програмування інфокомунікаційних систем</h2>
         <p>
             Спеціальність готує фахівців, які проектують, розробляють і супроводжують програмно-апаратні рішення
             для інфокомунікаційних систем: від мережевої інфраструктури до веб- та мобільних застосунків,
@@ -110,7 +119,7 @@
             <tr><td>Правова компетентність</td><td>3.00</td><td>Основи теорії кіл</td><td>4.00</td></tr>
             <tr><td>Вища математика</td><td>5.00</td><td>Вища математика</td><td>5.00</td></tr>
             <tr><td>Дискретна математика</td><td>5.00</td><td>Фізика</td><td>5.00</td></tr>
-            <tr><td>Основи інфокомунікацій</td><td>5.00</td><td>Алгоритми і структури даних</td><td>4.00</td></tr>
+            <tr><td>Основи інфокомунікацій</td><td>5.00</td><td>Алгоритми та структури даних</td><td>4.00</td></tr>
             <tr><td>Програмування на Python </td><td>4.50</td><td>Програмування на Python </td><td>4.50</td></tr>
             <tr><td></td><td></td><td>Навчальна практика</td><td>3.00</td></tr>
             </tbody>
@@ -125,7 +134,7 @@
         <p>
             Перший предмет <strong>"Основи інфокомунікацій"</strong> розповість про цілі навчання освітньої програми,
             сучасні тенденції в інфокомунікаціях і інформаційних технологіях, можливості й варіанти вашого розвитку.
-            Як і в усьому ХАІ, студент формує свою власну навчальну траєкторію вже на 1-му курсі за допомогою
+            Як і в усьому ХАІ, студент формує свою власну навчальну траєкторію вже на 1 курсі за допомогою
             дисциплін за вибором: <strong>"Іноземна мова"</strong>, <strong>"Українські студії"</strong>,
             <strong>"Гуманітарна або економічна дисципліна за вибором"</strong> і
             <strong>"Правова компетентність за вибором"</strong>. Вони розвивають у студентів так звані
@@ -137,10 +146,10 @@
             <strong>"Фізика"</strong> формують основу для вивчення подальших прикладних курсів.
             <strong>"Основи теорії кіл"</strong> почнуть знайомство з електронікою в цілому. Паралельно з розвитком
             м’яких навичок і формуванням фундаменту для технічної частини ми посилено викладаємо студентам програмування.
-            В <strong>"Основах програмування"</strong> вивчається <span style="color:red;">мова програмування Python</span>,
+            В <strong>"Основах програмування"</strong> вивчається мова програмування Python,
             інтегровані середовища розробки, системи контролю версій, різні бібліотеки й інструменти.
-            Python панує як мова програмування в даній освітній програмі і практично у всьому навчальному процесі.
-            <strong>"Алгоритми і структури даних"</strong> також розширюють знання і розвивають навички
+            Python панує як мова програмування в даній освітній програмі й практично у всьому навчальному процесі.
+            <strong>"Алгоритми й структури даних"</strong> також розширюють знання і розвивають навички
             програмування як розробника мережевих додатків, так і систем обробки даних.
             <strong>"Навчальна практика"</strong> присвячується вивченню операційних систем на базі ядра Linux,
             що є основою для більшості інформаційних технологій.
@@ -168,16 +177,11 @@
             Ваш браузер не підтримує аудіо.
         </audio>
 
-        <div aria-label="Керування відгуками">
-            <button type="button" aria-controls="alumni-list" aria-label="Попередній відгук">◀</button>
-            <button type="button" aria-controls="alumni-list" aria-label="Наступний відгук">▶</button>
-        </div>
-
         <ul id="alumni-list">
             <li>
                 <article aria-label="1 з 4">
                     <blockquote>
-                        <p>«Навчання на кафедрі дало мені сильну базу з веб-технологій…»</p>
+                        <p>«Навчання на кафедрі дало мені сильну базу з вебтехнологій…»</p>
                     </blockquote>
                     <p>
                         <img src="media/feedback-1.png" alt="Аватар випускника"
@@ -347,27 +351,6 @@
         </form>
     </section>
 
-    <!-- Контакти -->
-    <section id="contacts" aria-labelledby="contacts-title">
-        <h2 id="contacts-title">Контакти</h2>
-        <address>
-            61070, Харків, вул. Вадима Манька, 17<br />
-            НАУ ім. М. Є. Жуковського «ХАІ»<br />
-            Кафедра інформаційно-комунікаційних технологій №504<br />
-            Телефон: <a href="tel:+380995025775">+38 (099) 502-57-75</a> (у будні 9:00–17:00)<br />
-            E-mail: <a href="mailto:k504@khai.edu">k504@khai.edu</a>
-        </address>
-
-        <h3>Соціальні мережі</h3>
-        <ul aria-label="Соціальні мережі кафедри">
-            <li><a href="#" aria-label="Facebook"><img src="media/fb.svg" alt="Facebook" width="28" height="28" /></a></li>
-            <li><a href="#" aria-label="LinkedIn"><img src="media/in.svg" alt="LinkedIn" width="28" height="28" /></a></li>
-            <li><a href="#" aria-label="Instagram"><img src="media/instagram.svg" alt="Instagram" width="28" height="28" /></a></li>
-            <li><a href="#" aria-label="Telegram"><img src="media/telegram.svg" alt="Telegram" width="28" height="28" /></a></li>
-            <li><a href="#" aria-label="Viber"><img src="media/viber.svg" alt="Viber" width="28" height="28" /></a></li>
-        </ul>
-    </section>
-
     <!-- Новини -->
     <section id="news" aria-labelledby="news-title">
         <h2 id="news-title">Новини</h2>
@@ -379,11 +362,6 @@
                 Ваш браузер не підтримує відтворення відео.
             </video>
         </figure>
-
-        <div aria-label="Керування новинами">
-            <button type="button" aria-controls="news-list" aria-label="Попередня новина">◀</button>
-            <button type="button" aria-controls="news-list" aria-label="Наступна новина">▶</button>
-        </div>
 
         <ul id="news-list" class="news-cards">
 
@@ -442,7 +420,7 @@
 
 <!-- НИЖНІЙ КОЛОНТИТУЛ -->
 <footer aria-labelledby="footer-title">
-    <h2 id="footer-title">Кафедра ІКТ ХАІ — контакти</h2>
+    <h2 id="footer-title">Кафедра інформаційно-комунікаційних технологій ХАІ — контакти</h2>
 
     <div>
         <a href="#" aria-label="Головна">

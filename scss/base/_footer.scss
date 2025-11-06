@@ -1,0 +1,42 @@
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Заголовок футера — на всю ширину, по центру */
+footer > h2 {
+  width: 100%;
+  text-align: center;
+}
+
+/* Блок із логотипом та копірайтом — окремим нижнім рядом, по центру */
+footer > div {
+  order: 99;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Колонки: Адреса, Зв’язок, Соціальні мережі */
+footer > section {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer > section ul[aria-label="Соціальні мережі кафедри"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}

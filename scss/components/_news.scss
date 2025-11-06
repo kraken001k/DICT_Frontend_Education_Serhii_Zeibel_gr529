@@ -1,15 +1,55 @@
 #news {
-  .news-cards {
-    .news-card {
-      border-right: 1px solid $red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
 
-      &:last-child {
-        border-right: none;
-      }
+/* видео по центру і зменшене */
+#news > figure {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
 
-      .content-wrapper {
-        padding: 10px;
-      }
-    }
+#news > figure video {
+  display: block;
+  width: 320px;
+  height: auto;
+  max-width: 100%;
+}
+
+/* список новин як ряд блоків по центру */
+#news .news-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#news .news-card {
+  flex: 0 1 200px;
+  min-width: 0;
+  border-right: 1px solid $red;
+
+  &:last-child {
+    border-right: none;
   }
+}
+
+/* відступи всередині карточки */
+#news .news-card .content-wrapper {
+  padding: 10px;
+}
+
+/* картинки під ширину картки */
+#news .news-card img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
