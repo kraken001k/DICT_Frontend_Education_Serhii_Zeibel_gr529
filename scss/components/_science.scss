@@ -1,0 +1,16 @@
+#science {
+  display: flex;
+  flex-direction: column;   /* h2, h3, текст, кнопка, картинка — один під одним */
+  align-items: center;      /* усе по центру по горизонталі */
+  gap: 16px;
+}
+
+#science figure {
+  margin: 0;
+}
+
+#science img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

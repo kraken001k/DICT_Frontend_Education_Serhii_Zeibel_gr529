@@ -1,0 +1,16 @@
+#spec-126-ipis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      // заголовок, текст, таблиця — по центру
+  gap: 24px;
+  max-width: 960px;
+  margin: 60px auto 40px;   // чёткий отступ сверху от "Наші спеціальності" і снизу
+}
+
+#spec-126-ipis p {
+  max-width: 900px;         // чтобы строки не были слишком длинными
+}
+
+#spec-126-ipis table {
+  margin: 0 auto;           // таблица по центру секции
+}

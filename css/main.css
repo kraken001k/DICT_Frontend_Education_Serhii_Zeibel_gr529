@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Geologica:wght@100..900&display=swap");
 :root {
   --primary-color: #1d1d1d;
@@ -126,12 +127,196 @@ section {
 
 header {
   padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo {
+  width: 104px;
+}
+
+nav {
+  width: calc(100% - 298px);
+}
+
+.search {
+  width: 24px;
+  margin-left: auto;
+}
+
+.lang {
+  width: 104px;
+}
+
+nav {
+  width: calc(100% - 292px);
+}
+nav .main-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  font-weight: bold;
+}
+nav .main-menu .menu-link {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.lang {
+  width: 104px;
+}
+.lang .lang-wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.lang .lang-wrapper::before {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 24px;
+  border-radius: 100px;
+  border: 1px solid #ffffff;
+  order: 2;
+}
+.lang .lang-wrapper li {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #7c7c7c;
+  position: relative;
+}
+.lang .lang-wrapper li a {
+  text-decoration: none;
+  color: #7c7c7c;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.lang .lang-wrapper li a.is-active {
+  color: #ffffff;
+}
+.lang .lang-wrapper li.ua {
+  order: 1;
+}
+.lang .lang-wrapper li.ua a::after {
+  content: "";
+  display: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: url("/images/uk.png");
+  background-size: 18px 18px;
+  position: absolute;
+  top: 3px;
+  right: -31px;
+}
+.lang .lang-wrapper li.ua a.is-active::after {
+  display: block;
+}
+.lang .lang-wrapper li.en {
+  order: 3;
+}
+.lang .lang-wrapper li.en a::before {
+  content: "";
+  display: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: url("/images/en.png") no-repeat;
+  background-size: 18px 18px;
+  position: absolute;
+  top: 3px;
+  left: -31px;
+}
+.lang .lang-wrapper li.en a.is-active::before {
+  display: block;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Заголовок футера — на всю ширину, по центру */
+footer > h2 {
+  width: 100%;
+  text-align: center;
+}
+
+/* Блок із логотипом та копірайтом — окремим нижнім рядом, по центру */
+footer > div {
+  order: 99;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Колонки: Адреса, Зв’язок, Соціальні мережі */
+footer > section {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer > section ul[aria-label="Соціальні мережі кафедри"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
 }
 
 #feedbacks .cards-wrapper .card {
   padding: 20px;
   border-radius: 20px;
   border: 1px solid #7c7c7c;
+}
+
+#feedbacks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+#feedbacks #alumni-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ширина кожного відгуку */
+#feedbacks #alumni-list li {
+  flex: 0 1 220px;
 }
 
 #in-numbers .cards-wrapper .card {
@@ -142,20 +327,225 @@ header {
   border-right: none;
 }
 
-#news .news-cards .news-card {
+#in-numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+#in-numbers ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* видео по центру і зменшене */
+#news > figure {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#news > figure video {
+  display: block;
+  width: 320px;
+  height: auto;
+  max-width: 100%;
+}
+
+/* список новин як ряд блоків по центру */
+#news .news-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#news .news-card {
+  flex: 0 1 200px;
+  min-width: 0;
   border-right: 1px solid #ff3b39;
 }
-#news .news-cards .news-card:last-child {
+#news .news-card:last-child {
   border-right: none;
 }
-#news .news-cards .news-card .content-wrapper {
+
+/* відступи всередині карточки */
+#news .news-card .content-wrapper {
   padding: 10px;
 }
 
-#specialties .cards-wrapper .card {
-  padding: 20px;
-  border-radius: 20px;
-  border: 1px solid #7c7c7c;
+/* картинки під ширину картки */
+#news .news-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#specialties {
+  /* секція як центрований блок */
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* опис по центру */
+#specialties > p {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* список з двома спецами */
+#specialties > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* центр по горизонталі */
+  align-items: flex-start;
+  gap: 60px; /* відстань між двома блоками */
+}
+
+/* кожен елемент — фіксована компактна картка,
+   щоб Flex міг нормально їх центрувати */
+#specialties > ul > li {
+  flex: 0 0 320px; /* ширина блоку спецiальності */
+}
+
+/* текст усередині картки */
+#specialties > ul > li > article {
+  text-align: left;
+}
+
+#banner {
+  position: relative;
+  height: 720px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+#banner .content-wrapper {
+  width: 67%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  z-index: 9;
+}
+#banner .content-wrapper h1 {
+  margin: 0;
+}
+#banner .content-wrapper .description p {
+  margin: 0;
+}
+#banner .content-wrapper .button {
+  text-decoration: none;
+  cursor: pointer;
+}
+#banner .image-wrapper {
+  position: absolute;
+  top: -80px;
+  right: 0;
+}
+
+#apply {
+  display: flex;
+  flex-direction: column; /* заголовок + форма стовпчиком */
+  align-items: center; /* центр по горизонталі */
+  gap: 24px;
+}
+
+#apply form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start; /* поля вирівняні ліворуч всередині форми */
+}
+
+/* групи полів у кілька колонок можна зібрати в ряд */
+#apply fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+
+#apply fieldset p {
+  margin: 0;
+}
+
+#partners {
+  display: flex;
+  flex-direction: column; /* заголовок + логотипи стовпчиком */
+  align-items: center; /* центр по горизонталі */
+  gap: 24px;
+}
+
+#partners ul[aria-label="Партнерські компанії"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+  justify-content: center; /* горизонтальне вирівнювання */
+  align-items: center; /* вертикальне вирівнювання логотипів */
+}
+
+#science {
+  display: flex;
+  flex-direction: column; /* h2, h3, текст, кнопка, картинка — один під одним */
+  align-items: center; /* усе по центру по горизонталі */
+  gap: 16px;
+}
+
+#science figure {
+  margin: 0;
+}
+
+#science img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#spec-126-ipis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 960px;
+  margin: 60px auto 40px;
+}
+
+#spec-126-ipis p {
+  max-width: 900px;
+}
+
+#spec-126-ipis table {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */

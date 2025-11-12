@@ -1,0 +1,28 @@
+#apply {
+  display: flex;
+  flex-direction: column;   /* заголовок + форма стовпчиком */
+  align-items: center;      /* центр по горизонталі */
+  gap: 24px;
+}
+
+#apply form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;  /* поля вирівняні ліворуч всередині форми */
+}
+
+/* групи полів у кілька колонок можна зібрати в ряд */
+#apply fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+
+#apply fieldset p {
+  margin: 0;
+}

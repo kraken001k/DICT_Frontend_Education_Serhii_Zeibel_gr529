@@ -10,3 +10,22 @@
     }
   }
 }
+
+#in-numbers {
+  display: flex;
+  flex-direction: column; // заголовок + список стовпчиком
+  align-items: center; // центр по горизонталі
+  gap: 24px;
+}
+
+#in-numbers ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  justify-content: center; // горизонтальне вирівнювання елементів
+  align-items: flex-start; // по верхньому краю
+}

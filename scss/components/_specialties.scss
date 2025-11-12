@@ -1,7 +1,38 @@
 #specialties {
-  .cards-wrapper {
-    .card {
-      @include card;
-    }
-  }
+  /* секція як центрований блок */
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* опис по центру */
+#specialties > p {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* список з двома спецами */
+#specialties > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;   /* центр по горизонталі */
+  align-items: flex-start;
+  gap: 60px;                 /* відстань між двома блоками */
+}
+
+/* кожен елемент — фіксована компактна картка,
+   щоб Flex міг нормально їх центрувати */
+#specialties > ul > li {
+  flex: 0 0 320px;           /* ширина блоку спецiальності */
+}
+
+/* текст усередині картки */
+#specialties > ul > li > article {
+  text-align: left;
 }
