@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Grid Layout</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-$END$
+<body class="grid-page">
+<div class="grid-page-layout">
+
+    <header class="grid-header">Header</header>
+
+    <div class="grid-nav">Navigation</div>
+
+    <main class="grid-main">
+        <h1>Основна частина сторінки</h1>
+        <p></p>
+
+        <section class="grid-main-inner">
+            <div class="grid-main-content">
+                <h2>Основна частина сторінки</h2>
+                <p></p>
+
+                <h3>Галерея зображень</h3>
+                <p> Зараз використано тестові зображення, у майбутньому вони будуть замінені на ілюстрації, що відповідатимуть темі сторінки. </p>
+                <div class="grid-gallery">
+                    <img src="images/CAT_1.jpg" alt="Зображення 1">
+                    <img src="images/CAT_2.jpg" alt="Зображення 2">
+                    <img src="images/CAT_3.jpg" alt="Зображення 3">
+                    <img src="images/CAT_4.jpg" alt="Зображення 4">
+                </div>
+            </div>
+
+            <aside class="grid-sidebar">
+                Sidebar
+            </aside>
+        </section>
+    </main>
+
+</div>
 </body>
 </html>
