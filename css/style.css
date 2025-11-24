@@ -24,6 +24,7 @@ section + section { margin-top: 40px; }
     padding: 0;
     margin: 0;
 }
+
 #specialties li article {
     padding: 20px;
     border: 1px solid #8E8E8E;
@@ -37,21 +38,25 @@ section + section { margin-top: 40px; }
     padding: 0;
     margin: 0;
 }
+
 #numbers li {
     padding: 10px;
 }
+
 /* ліва межа всім, крім останньої */
 #numbers li:not(:last-child) {
     border-left: 1px solid #FF3A3A;
 }
 
 /* “Відгуки випускників” */
+
 #alumni ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
 }
+
 #alumni li article {
     padding: 20px;
     border: 1px solid #8E8E8E;
@@ -66,13 +71,95 @@ section + section { margin-top: 40px; }
     display: grid;       /* або flex; grid зручніший для різної висоти */
     gap: 0;              /* межі замінюють відступи між картками */
 }
+
 #news li:not(:last-child) article {
     border-left: 1px solid #FF3A3A;
 }
+
 /* паддінг на самому <article> */
 #news li article {
     padding: 10px;
 }
 footer {
     padding-block: 40px; /* верх і низ по 40px */
+}
+
+/* ===== Сторінка grid.html ===== */
+
+/* Тільки для grid.html (через клас на <body>) */
+body.grid-page {
+    background-color: #F5F5F5;
+    color: #000;
+    max-width: none;
+    margin: 0;
+    padding-inline: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Загальний макет: Header, Navigation, Main */
+.grid-page-layout {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    min-height: 100vh;
+}
+
+/* Верхня темна смуга Header */
+.grid-header {
+    background: #3F3F3F;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+}
+
+/* Світла смуга Navigation */
+.grid-nav {
+    background: #E3E3E3;
+    text-align: center;
+    padding: 12px 0;
+    font-weight: 600;
+}
+
+/* Основний текст під навігацією */
+.grid-main {
+    padding: 24px 16px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Блок "карточка + sidebar" */
+.grid-main-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0;
+    margin-top: 24px;
+    background: #FFFFFF;
+}
+
+/* Ліва частина (як на макеті) */
+.grid-main-content {
+    padding: 16px;
+}
+
+/* Права світло-сіра колонка Sidebar */
+.grid-sidebar {
+    background: #EAEAEA;
+    padding: 16px;
+    text-align: center;
+}
+
+/* Галерея зображень всередині основного контенту */
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки, як у макеті */
+    gap: 10px;
+    margin-top: 16px;
+}
+
+/* Самі фото кота */
+.grid-gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
 }
