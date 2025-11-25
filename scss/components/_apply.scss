@@ -1,28 +1,94 @@
 #apply {
-  display: flex;
-  flex-direction: column;   /* заголовок + форма стовпчиком */
-  align-items: center;      /* центр по горизонталі */
-  gap: 24px;
-}
+  width: 100%;
+  padding: 40px 20px;
 
-#apply form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  align-items: flex-start;  /* поля вирівняні ліворуч всередині форми */
+  align-items: center;
+  gap: 24px;
+
+  form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  fieldset p {
+    margin: 0;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
 }
 
-/* групи полів у кілька колонок можна зібрати в ряд */
-#apply fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
+/* TABLET */
+@media (min-width: $tablet) {
+  #apply {
 
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 24px;
+    form {
+      max-width: 700px;
+    }
+
+    fieldset {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+    }
+
+    fieldset p {
+      flex: 1 1 calc(50% - 24px);
+    }
+
+    input,
+    textarea,
+    select {
+      font-size: 16px;
+    }
+  }
 }
 
-#apply fieldset p {
-  margin: 0;
+/* DESKTOP SMALL (1024px) */
+@media (min-width: $desktop-sm) {
+  #apply {
+
+    form {
+      max-width: 800px;
+    }
+
+    fieldset p {
+      flex: 1 1 calc(33.333% - 24px);
+    }
+  }
+}
+
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: $desktop-lg) {
+  #apply {
+
+    form {
+      max-width: 900px;
+    }
+
+    fieldset p {
+      flex: 1 1 calc(33.333% - 24px);
+    }
+  }
 }

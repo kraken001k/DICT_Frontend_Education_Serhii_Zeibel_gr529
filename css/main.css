@@ -18,45 +18,115 @@
   --silver-color: #bfbfbf;
 }
 
+/* MOBILE */
 body {
   font-size: 14px;
-  font-family: "Comfortaa", sans-serif;
-  color: var(--primary-text-color);
+  line-height: 1.4;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+/* TABLET (796px) */
+@media (min-width: 796px) {
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 22px;
+  }
+  h6 {
+    font-size: 20px;
+  }
+}
+/* DESKTOP SMALL (1024px) */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 34px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 26px;
+  }
+  h5 {
+    font-size: 22px;
+  }
+  h6 {
+    font-size: 20px;
+  }
+  body {
+    font-size: 17px;
+  }
+}
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+  h6 {
+    font-size: 22px;
+  }
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: 1.4;
   font-weight: 700;
   font-family: "Geologica", sans-serif;
 }
 
-h1, .h1 {
-  font-size: 38px;
-}
-
-h2, .h2 {
-  font-size: 32px;
-}
-
-h3, .h3 {
-  font-size: 28px;
-}
-
-h4, .h4 {
-  font-size: 24px;
-}
-
-h5, .h5 {
-  font-size: 18px;
-}
-
-h6, .h6 {
-  font-size: 16px;
-}
-
 .p, p {
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.4;
   margin: 12px 0;
 }
 
@@ -88,15 +158,66 @@ em {
   font-style: italic;
 }
 
+/* BODY */
 body {
   background: var(--primary-color);
   color: var(--primary-text-color);
   font-family: "Comfortaa", sans-serif;
-  max-width: 80em;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+/* CONTAINER */
+.container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* TABLET */
+@media (min-width: 796px) {
+  .container {
+    max-width: 768px;
+  }
+}
+/* DESKTOP-SM (1024) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+/* DESKTOP-LG (1200) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+/* GRID */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* MOBILE — 1 column */
+.col {
+  width: 100%;
+}
+
+/* TABLET — 2 columns */
+@media (min-width: 796px) {
+  .col-6 {
+    width: calc(50% - 20px);
+  }
+}
+/* DESKTOP — 3 columns */
+@media (min-width: 1024px) {
+  .col-4 {
+    width: calc(33.333% - 20px);
+  }
+}
+/* LINKS / BUTTONS */
 a {
   color: var(--red-color);
 }
@@ -109,6 +230,7 @@ a {
   border-radius: 5px;
   margin: 40px 0;
   border: 1px solid var(--red-color);
+  cursor: pointer;
 }
 .button p {
   margin: 0;
@@ -121,6 +243,7 @@ a {
   background: var(--primary-color);
 }
 
+/* SECTIONS */
 section {
   margin: 40px 0;
 }
@@ -139,26 +262,30 @@ header {
 }
 
 nav {
-  width: calc(100% - 298px);
-}
-
-.search {
-  width: 24px;
-  margin-left: auto;
-}
-
-.lang {
-  width: 104px;
-}
-
-nav {
   width: calc(100% - 292px);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+nav .burger-menu {
+  margin-left: auto;
+  width: fit-content;
+}
+nav .burger-menu .menu-toggle {
+  margin: 0;
+  padding: 8px 16px;
+  background: #ff3b39;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
 }
 nav .main-menu {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
@@ -170,6 +297,17 @@ nav .main-menu .menu-link {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: bold;
+}
+nav .main-menu.show {
+  display: flex;
+  position: absolute;
+  top: 53px;
+  width: 90%;
+  left: 0;
+  margin: 0;
+  padding: 20px;
+  background: var(--primary-color);
+  z-index: 999;
 }
 
 .lang {
@@ -219,7 +357,6 @@ nav .main-menu .menu-link {
   display: none;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
   background: url("/images/uk.png");
   background-size: 18px 18px;
   position: absolute;
@@ -237,7 +374,6 @@ nav .main-menu .menu-link {
   display: none;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
   background: url("/images/en.png") no-repeat;
   background-size: 18px 18px;
   position: absolute;
@@ -248,6 +384,20 @@ nav .main-menu .menu-link {
   display: block;
 }
 
+@media (min-width: 1200px) {
+  header nav {
+    justify-content: center;
+  }
+  header nav .burger-menu {
+    display: none;
+  }
+  header nav .main-menu {
+    display: flex;
+    position: static;
+    padding: 0;
+    width: auto;
+  }
+}
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -290,148 +440,273 @@ footer > section ul[aria-label="Соціальні мережі кафедри"]
   justify-content: center;
 }
 
-#feedbacks .cards-wrapper .card {
-  padding: 20px;
-  border-radius: 20px;
-  border: 1px solid #7c7c7c;
-}
-
 #feedbacks {
+  width: 100%;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
 }
-
 #feedbacks #alumni-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column; /* MOBILE: одна колонка */
+  gap: 24px;
+  width: 100%;
+  align-items: center;
 }
-
-/* ширина кожного відгуку */
 #feedbacks #alumni-list li {
-  flex: 0 1 220px;
+  width: 100%;
+  max-width: 360px;
 }
 
-#in-numbers .cards-wrapper .card {
-  padding: 10px;
-  border-right: 1px solid #ff3b39;
+/* TABLET */
+@media (min-width: 796px) {
+  #feedbacks #alumni-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  #feedbacks #alumni-list li {
+    max-width: none;
+    width: 100%;
+  }
 }
-#in-numbers .cards-wrapper .card:last-child {
-  border-right: none;
+/* DESKTOP SMALL (1024px) */
+@media (min-width: 1024px) {
+  #feedbacks #alumni-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+  }
 }
-
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: 1200px) {
+  #feedbacks #alumni-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+}
 #in-numbers {
+  width: 100%;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
 }
-
 #in-numbers ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 48px;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column; /* MOBILE – одна колонка */
+  gap: 24px;
+  width: 100%;
+  align-items: center;
+}
+#in-numbers ul li {
+  width: 100%;
+  max-width: 320px;
+}
+#in-numbers ul li .card {
+  padding: 10px;
+  border-right: none; /* на мобилке отключено */
 }
 
+/* TABLET */
+@media (min-width: 796px) {
+  #in-numbers ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 32px;
+  }
+  #in-numbers ul li {
+    max-width: none;
+    width: 100%;
+  }
+}
+/* DESKTOP SMALL (1024px) */
+@media (min-width: 1024px) {
+  #in-numbers ul {
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 36px;
+  }
+}
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: 1200px) {
+  #in-numbers ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  #in-numbers ul li .card {
+    border-right: 1px solid #ff3b39;
+  }
+  #in-numbers ul li:last-child .card {
+    border-right: none;
+  }
+}
 #news {
+  width: 100%;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
 }
-
-/* видео по центру і зменшене */
-#news > figure {
+#news figure {
   margin: 0;
   display: flex;
   justify-content: center;
 }
-
-#news > figure video {
-  display: block;
-  width: 320px;
+#news figure video {
+  width: 100%;
+  max-width: 320px;
   height: auto;
-  max-width: 100%;
+  display: block;
 }
-
-/* список новин як ряд блоків по центру */
+#news .news-card figure {
+  width: 100%;
+  display: block;
+}
+#news .news-card figure img {
+  width: 100%;
+  display: block;
+}
+#news .news-card figure figcaption {
+  width: 100%;
+  display: block;
+  text-align: left;
+  margin-top: 8px;
+}
 #news .news-cards {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
+  flex-direction: column; /* MOBILE */
+  gap: 24px;
+  align-items: center;
+}
+#news .news-card {
+  width: 100%;
+  max-width: 360px;
+  border: none;
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
 }
-
-#news .news-card {
-  flex: 0 1 200px;
-  min-width: 0;
-  border-right: 1px solid #ff3b39;
-}
-#news .news-card:last-child {
-  border-right: none;
-}
-
-/* відступи всередині карточки */
 #news .news-card .content-wrapper {
-  padding: 10px;
+  padding: 12px;
 }
-
-/* картинки під ширину картки */
 #news .news-card img {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
 }
 
+/* TABLET (796px) */
+@media (min-width: 796px) {
+  #news .news-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  #news .news-card {
+    max-width: none;
+    width: 100%;
+  }
+}
+/* DESKTOP SMALL (1024px) */
+@media (min-width: 1024px) {
+  #news .news-cards {
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 36px;
+  }
+  #news .news-card {
+    border-right: none;
+  }
+}
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: 1200px) {
+  #news .news-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  #news .news-card {
+    border-right: 1px solid #ff3b39;
+  }
+  #news .news-card:last-child {
+    border-right: none;
+  }
+}
 #specialties {
-  /* секція як центрований блок */
   max-width: 1200px;
   margin: 40px auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
 }
 
-/* опис по центру */
 #specialties > p {
   max-width: 900px;
   text-align: center;
 }
 
-/* список з двома спецами */
+/* MOBILE — одна колонка */
 #specialties > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; /* центр по горизонталі */
-  align-items: flex-start;
-  gap: 60px; /* відстань між двома блоками */
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  align-items: center;
 }
 
-/* кожен елемент — фіксована компактна картка,
-   щоб Flex міг нормально їх центрувати */
 #specialties > ul > li {
-  flex: 0 0 320px; /* ширина блоку спецiальності */
+  width: 100%;
+  max-width: 360px;
 }
 
+/* TABLET (796px) */
+@media (min-width: 796px) {
+  #specialties > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 40px;
+    justify-items: center;
+  }
+  #specialties > ul > li {
+    max-width: none;
+    width: 100%;
+  }
+}
+/* DESKTOP SMALL (1024px) */
+@media (min-width: 1024px) {
+  #specialties > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+  #specialties > ul > li {
+    width: 100%;
+  }
+}
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: 1200px) {
+  #specialties > ul {
+    gap: 60px;
+  }
+  #specialties > ul > li {
+    width: 320px;
+  }
+}
 /* текст усередині картки */
 #specialties > ul > li > article {
   text-align: left;
@@ -439,16 +714,14 @@ footer > section ul[aria-label="Соціальні мережі кафедри"]
 
 #banner {
   position: relative;
-  height: 720px;
-  display: flex;
-  align-items: center;
   overflow: hidden;
+  padding: 40px 0;
 }
 #banner .content-wrapper {
-  width: 67%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   position: relative;
   z-index: 9;
 }
@@ -463,89 +736,290 @@ footer > section ul[aria-label="Соціальні мережі кафедри"]
   cursor: pointer;
 }
 #banner .image-wrapper {
-  position: absolute;
-  top: -80px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  top: 0;
   right: 0;
 }
-
-#apply {
-  display: flex;
-  flex-direction: column; /* заголовок + форма стовпчиком */
-  align-items: center; /* центр по горизонталі */
-  gap: 24px;
+#banner .image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
+/* TABLET */
+@media (min-width: 796px) {
+  #banner {
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+  }
+  #banner .content-wrapper {
+    width: 50%;
+    gap: 30px;
+  }
+  #banner .image-wrapper {
+    width: 50%;
+    position: absolute;
+    top: -40px;
+    right: 0;
+  }
+  #banner .image-wrapper img {
+    width: 100%;
+  }
+}
+/* DESKTOP SMALL (1024px) */
+@media (min-width: 1024px) {
+  #banner {
+    padding: 80px 0;
+  }
+  #banner .content-wrapper {
+    width: 55%;
+  }
+  #banner .image-wrapper {
+    width: 45%;
+    top: -60px;
+  }
+}
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: 1200px) {
+  #banner {
+    height: 720px;
+  }
+  #banner .content-wrapper {
+    width: 67%;
+  }
+  #banner .image-wrapper {
+    top: -80px;
+    right: 0;
+    width: auto;
+  }
+}
+#apply {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
 #apply form {
+  width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  align-items: flex-start; /* поля вирівняні ліворуч всередині форми */
+  align-items: stretch;
 }
-
-/* групи полів у кілька колонок можна зібрати в ряд */
 #apply fieldset {
   border: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px 24px;
+  flex-direction: column;
+  gap: 16px;
 }
-
 #apply fieldset p {
   margin: 0;
 }
-
-#partners {
-  display: flex;
-  flex-direction: column; /* заголовок + логотипи стовпчиком */
-  align-items: center; /* центр по горизонталі */
-  gap: 24px;
+#apply input,
+#apply textarea,
+#apply select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
 }
 
+/* TABLET */
+@media (min-width: 796px) {
+  #apply form {
+    max-width: 700px;
+  }
+  #apply fieldset {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+  }
+  #apply fieldset p {
+    flex: 1 1 calc(50% - 24px);
+  }
+  #apply input,
+  #apply textarea,
+  #apply select {
+    font-size: 16px;
+  }
+}
+/* DESKTOP SMALL (1024px) */
+@media (min-width: 1024px) {
+  #apply form {
+    max-width: 800px;
+  }
+  #apply fieldset p {
+    flex: 1 1 calc(33.333% - 24px);
+  }
+}
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: 1200px) {
+  #apply form {
+    max-width: 900px;
+  }
+  #apply fieldset p {
+    flex: 1 1 calc(33.333% - 24px);
+  }
+}
+#partners {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
 #partners ul[aria-label="Партнерські компанії"] {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px 40px;
-  justify-content: center; /* горизонтальне вирівнювання */
-  align-items: center; /* вертикальне вирівнювання логотипів */
+  flex-direction: column; /* MOBILE */
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+#partners ul[aria-label="Партнерські компанії"] li img {
+  max-width: 160px;
+  height: auto;
+  display: block;
 }
 
+/* TABLET (796px) */
+@media (min-width: 796px) {
+  #partners ul[aria-label="Партнерські компанії"] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    justify-items: center;
+    gap: 32px 40px;
+  }
+}
+/* DESKTOP SMALL (1024px) */
+@media (min-width: 1024px) {
+  #partners ul[aria-label="Партнерські компанії"] {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px 48px;
+  }
+}
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: 1200px) {
+  #partners ul[aria-label="Партнерські компанії"] {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px 60px;
+  }
+}
 #science {
+  width: 100%;
+  padding: 40px 20px;
   display: flex;
-  flex-direction: column; /* h2, h3, текст, кнопка, картинка — один під одним */
-  align-items: center; /* усе по центру по горизонталі */
+  flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
-
 #science figure {
   margin: 0;
+  width: 100%;
 }
-
-#science img {
+#science figure img {
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
 
+/* TABLET (796px) */
+@media (min-width: 796px) {
+  #science {
+    padding: 60px 0;
+    gap: 20px;
+  }
+  #science p {
+    max-width: 700px;
+    text-align: center;
+  }
+}
+/* DESKTOP SMALL (1024px) */
+@media (min-width: 1024px) {
+  #science {
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 22px;
+  }
+  #science p {
+    max-width: 750px;
+  }
+}
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: 1200px) {
+  #science {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 0;
+    gap: 24px;
+  }
+  #science p {
+    max-width: 850px;
+  }
+}
 #spec-126-ipis {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  max-width: 960px;
-  margin: 60px auto 40px;
+  gap: 20px;
+  width: 100%;
+  margin: 40px 0;
+  padding: 0 20px;
 }
-
 #spec-126-ipis p {
-  max-width: 900px;
+  max-width: 100%;
+  text-align: center;
+}
+#spec-126-ipis table {
+  width: 100%;
+  overflow-x: auto; /* MOBILE — прокрутка если нужно */
+  display: block;
 }
 
-#spec-126-ipis table {
-  margin: 0 auto;
+/* TABLET (796px) */
+@media (min-width: 796px) {
+  #spec-126-ipis {
+    margin: 60px auto;
+    padding: 0;
+  }
+  #spec-126-ipis p {
+    max-width: 800px;
+  }
+  #spec-126-ipis table {
+    width: auto;
+    display: table;
+  }
+}
+/* DESKTOP SMALL (1024px) */
+@media (min-width: 1024px) {
+  #spec-126-ipis {
+    max-width: 900px;
+    margin: 70px auto 50px;
+  }
+  #spec-126-ipis p {
+    max-width: 850px;
+  }
+}
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: 1200px) {
+  #spec-126-ipis {
+    max-width: 960px;
+    margin: 80px auto 60px;
+  }
+  #spec-126-ipis p {
+    max-width: 900px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

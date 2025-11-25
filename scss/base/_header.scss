@@ -13,32 +13,37 @@ header {
 }
 
 nav {
-  width: calc(100% - 298px);
-}
-
-.search {
-  width: 24px;
-  margin-left: auto;
-}
-
-.lang {
-  width: 104px;
-}
-
-nav {
   width: calc(100% - 292px);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .burger-menu {
+    margin-left: auto;
+    width: fit-content;
+
+    .menu-toggle {
+      margin: 0;
+      padding: 8px 16px;
+      background: $red;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
 
   .main-menu {
     margin: 0;
     padding: 0;
     list-style: none;
 
-    display: flex;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-
     font-weight: bold;
 
     .menu-link {
@@ -46,6 +51,18 @@ nav {
       color: $white;
       text-transform: uppercase;
       font-weight: bold;
+    }
+
+    &.show {
+      display: flex;
+      position: absolute;
+      top: 53px;
+      width: 90%;
+      left: 0;
+      margin: 0;
+      padding: 20px;
+      background: var(--primary-color);
+      z-index: 999;
     }
   }
 }
@@ -94,52 +111,57 @@ nav {
 
       &.ua {
         order: 1;
-
         a {
           &::after {
             content: '';
             display: none;
             width: 18px;
             height: 18px;
-            border-radius: 50%;
             background: url("/images/uk.png");
             background-size: 18px 18px;
             position: absolute;
             top: 3px;
             right: -31px;
           }
-
-          &.is-active {
-            &::after {
-              display: block;
-            }
-          }
+          &.is-active { &::after { display: block; } }
         }
       }
 
       &.en {
         order: 3;
-
         a {
           &::before {
             content: '';
             display: none;
             width: 18px;
             height: 18px;
-            border-radius: 50%;
             background: url("/images/en.png") no-repeat;
             background-size: 18px 18px;
             position: absolute;
             top: 3px;
             left: -31px;
           }
-
-          &.is-active {
-            &::before {
-              display: block;
-            }
-          }
+          &.is-active { &::before { display: block; } }
         }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    nav {
+      justify-content: center;
+
+      .burger-menu {
+        display: none;
+      }
+
+      .main-menu {
+        display: flex;
+        position: static;
+        padding: 0;
+        width: auto;
       }
     }
   }
