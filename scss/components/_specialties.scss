@@ -1,35 +1,72 @@
 #specialties {
-  /* секція як центрований блок */
   max-width: 1200px;
   margin: 40px auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
 }
 
-/* опис по центру */
 #specialties > p {
   max-width: 900px;
   text-align: center;
 }
 
-/* список з двома спецами */
+/* MOBILE — одна колонка */
 #specialties > ul {
   list-style: none;
   margin: 0;
   padding: 0;
 
   display: flex;
-  justify-content: center;   /* центр по горизонталі */
-  align-items: flex-start;
-  gap: 60px;                 /* відстань між двома блоками */
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  align-items: center;
 }
 
-/* кожен елемент — фіксована компактна картка,
-   щоб Flex міг нормально їх центрувати */
 #specialties > ul > li {
-  flex: 0 0 320px;           /* ширина блоку спецiальності */
+  width: 100%;
+  max-width: 360px;
+}
+
+/* TABLET (796px) */
+@media (min-width: $tablet) {
+  #specialties > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 40px;
+    justify-items: center;
+  }
+
+  #specialties > ul > li {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+/* DESKTOP SMALL (1024px) */
+@media (min-width: $desktop-sm) {
+  #specialties > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+
+  #specialties > ul > li {
+    width: 100%;
+  }
+}
+
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: $desktop-lg) {
+  #specialties > ul {
+    gap: 60px;
+  }
+
+  #specialties > ul > li {
+    width: 320px;
+  }
 }
 
 /* текст усередині картки */

@@ -1,16 +1,61 @@
 #science {
+  width: 100%;
+  padding: 40px 20px;
+
   display: flex;
-  flex-direction: column;   /* h2, h3, текст, кнопка, картинка — один під одним */
-  align-items: center;      /* усе по центру по горизонталі */
+  flex-direction: column;
+  align-items: center;
   gap: 16px;
+
+  figure {
+    margin: 0;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
-#science figure {
-  margin: 0;
+/* TABLET (796px) */
+@media (min-width: $tablet) {
+  #science {
+    padding: 60px 0;
+    gap: 20px;
+
+    p {
+      max-width: 700px;
+      text-align: center;
+    }
+  }
 }
 
-#science img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+/* DESKTOP SMALL (1024px) */
+@media (min-width: $desktop-sm) {
+  #science {
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 22px;
+
+    p {
+      max-width: 750px;
+    }
+  }
+}
+
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: $desktop-lg) {
+  #science {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 0;
+    gap: 24px;
+
+    p {
+      max-width: 850px;
+    }
+  }
 }

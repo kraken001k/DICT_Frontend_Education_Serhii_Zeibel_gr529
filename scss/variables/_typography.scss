@@ -1,27 +1,66 @@
 $base-padding: 20px;
 
+/* MOBILE */
 body {
   font-size: 14px;
-  font-family: $comfortaa;
-  color: var(--primary-text-color);
+  line-height: 1.4;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1 { font-size: 28px; }
+h2 { font-size: 26px; }
+h3 { font-size: 24px; }
+h4 { font-size: 22px; }
+h5 { font-size: 20px; }
+h6 { font-size: 18px; }
+
+/* TABLET (796px) */
+@media (min-width: $tablet) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 { font-size: 32px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 26px; }
+  h4 { font-size: 24px; }
+  h5 { font-size: 22px; }
+  h6 { font-size: 20px; }
+}
+
+/* DESKTOP SMALL (1024px) */
+@media (min-width: $desktop-sm) {
+  h1 { font-size: 34px; }
+  h2 { font-size: 30px; }
+  h3 { font-size: 28px; }
+  h4 { font-size: 26px; }
+  h5 { font-size: 22px; }
+  h6 { font-size: 20px; }
+
+  body {
+    font-size: 17px;
+  }
+}
+
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: $desktop-lg) {
+  h1 { font-size: 36px; }
+  h2 { font-size: 32px; }
+  h3 { font-size: 30px; }
+  h4 { font-size: 28px; }
+  h5 { font-size: 24px; }
+  h6 { font-size: 22px; }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: 1.4;
   font-weight: 700;
   font-family: $geologica;
 }
 
-h1, .h1 { font-size: 38px; }
-h2, .h2 { font-size: 32px; }
-h3, .h3 { font-size: 28px; }
-h4, .h4 { font-size: 24px; }
-h5, .h5 { font-size: 18px; }
-h6, .h6 { font-size: 16px; }
-
 .p, p {
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.4;
   margin: 12px 0;
 }
 

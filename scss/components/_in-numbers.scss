@@ -1,31 +1,68 @@
 #in-numbers {
-  .cards-wrapper {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column; /* MOBILE – одна колонка */
+    gap: 24px;
+    width: 100%;
+    align-items: center;
+  }
+
+  ul li {
+    width: 100%;
+    max-width: 320px;
+
     .card {
       padding: 10px;
-      border-right: 1px solid $red;
-
-      &:last-child {
-        border-right: none;
-      }
+      border-right: none; /* на мобилке отключено */
     }
   }
 }
 
-#in-numbers {
-  display: flex;
-  flex-direction: column; // заголовок + список стовпчиком
-  align-items: center; // центр по горизонталі
-  gap: 24px;
+/* TABLET */
+@media (min-width: $tablet) {
+  #in-numbers ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 32px;
+  }
+
+  #in-numbers ul li {
+    max-width: none;
+    width: 100%;
+  }
 }
 
-#in-numbers ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* DESKTOP SMALL (1024px) */
+@media (min-width: $desktop-sm) {
+  #in-numbers ul {
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 36px;
+  }
+}
 
-  display: flex;
-  flex-wrap: wrap;
-  gap: 48px;
-  justify-content: center; // горизонтальне вирівнювання елементів
-  align-items: flex-start; // по верхньому краю
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: $desktop-lg) {
+  #in-numbers ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  #in-numbers ul li .card {
+    border-right: 1px solid $red;
+  }
+
+  #in-numbers ul li:last-child .card {
+    border-right: none;
+  }
 }

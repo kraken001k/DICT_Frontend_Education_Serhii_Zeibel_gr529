@@ -1,15 +1,13 @@
 #banner {
   position: relative;
-  height: 720px;
-  display: flex;
-  align-items: center;
   overflow: hidden;
+  padding: 40px 0;
 
   .content-wrapper {
-    width: 67%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     position: relative;
     z-index: 9;
 
@@ -30,8 +28,74 @@
   }
 
   .image-wrapper {
-    position: absolute;
-    top: -80px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    top: 0;
     right: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+/* TABLET */
+@media (min-width: $tablet) {
+  #banner {
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+
+    .content-wrapper {
+      width: 50%;
+      gap: 30px;
+    }
+
+    .image-wrapper {
+      width: 50%;
+      position: absolute;
+      top: -40px;
+      right: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* DESKTOP SMALL (1024px) */
+@media (min-width: $desktop-sm) {
+  #banner {
+    padding: 80px 0;
+
+    .content-wrapper {
+      width: 55%;
+    }
+
+    .image-wrapper {
+      width: 45%;
+      top: -60px;
+    }
+  }
+}
+
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: $desktop-lg) {
+  #banner {
+    height: 720px;
+
+    .content-wrapper {
+      width: 67%;
+    }
+
+    .image-wrapper {
+      top: -80px;
+      right: 0;
+      width: auto;
+    }
   }
 }

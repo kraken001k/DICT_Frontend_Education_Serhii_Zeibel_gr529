@@ -1,11 +1,72 @@
+/* BODY */
 body {
   background: var(--primary-color);
   color: var(--primary-text-color);
   font-family: $font-stack;
-  max-width: $widedesk;
+
   margin: 0 auto;
   padding: 0 $base-padding;
 }
+
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* TABLET */
+@media (min-width: $tablet) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* DESKTOP-SM (1024) */
+@media (min-width: $desktop-sm) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+/* DESKTOP-LG (1200) */
+@media (min-width: $desktop-lg) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+
+/* GRID */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* MOBILE — 1 column */
+.col {
+  width: 100%;
+}
+
+/* TABLET — 2 columns */
+@media (min-width: $tablet) {
+  .col-6 {
+    width: calc(50% - 20px);
+  }
+}
+
+/* DESKTOP — 3 columns */
+@media (min-width: $desktop-sm) {
+  .col-4 {
+    width: calc(33.333% - 20px);
+  }
+}
+
+
+/* LINKS / BUTTONS */
 
 a {
   color: var(--red-color);
@@ -19,6 +80,7 @@ a {
   border-radius: 5px;
   margin: 40px 0;
   border: 1px solid var(--red-color);
+  cursor: pointer;
 
   p {
     margin: 0;
@@ -33,6 +95,9 @@ a {
     background: var(--primary-color);
   }
 }
+
+
+/* SECTIONS */
 
 section {
   margin: 40px 0;
