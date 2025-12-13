@@ -586,10 +586,19 @@ footer > section ul[aria-label="Соціальні мережі кафедри"]
   margin: 0;
   padding: 0;
   width: 100%;
+}
+#news .news-cards:not(.slick-initialized) {
   display: flex;
   flex-direction: column; /* MOBILE */
   gap: 24px;
   align-items: center;
+}
+#news .news-cards.slick-initialized .slick-slide {
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+#news .news-cards.slick-initialized .news-card {
+  max-width: none;
 }
 #news .news-card {
   width: 100%;
@@ -610,7 +619,7 @@ footer > section ul[aria-label="Соціальні мережі кафедри"]
 
 /* TABLET (796px) */
 @media (min-width: 796px) {
-  #news .news-cards {
+  #news .news-cards:not(.slick-initialized) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
@@ -622,7 +631,7 @@ footer > section ul[aria-label="Соціальні мережі кафедри"]
 }
 /* DESKTOP SMALL (1024px) */
 @media (min-width: 1024px) {
-  #news .news-cards {
+  #news .news-cards:not(.slick-initialized) {
     grid-template-columns: repeat(3, 1fr); /* 3 колонки */
     gap: 36px;
   }
@@ -632,7 +641,7 @@ footer > section ul[aria-label="Соціальні мережі кафедри"]
 }
 /* DESKTOP LARGE (1200px+) */
 @media (min-width: 1200px) {
-  #news .news-cards {
+  #news .news-cards:not(.slick-initialized) {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
